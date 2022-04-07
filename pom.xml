@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>pl.psnc.dl.ege.tei</groupId>
   <artifactId>tei-converter</artifactId>
-  <version>0.6</version>
+  <version>0.6.1-SNAPSHOT</version>
   <name>EGE TEI Converter</name>
   <properties>
 
@@ -173,9 +173,9 @@
 	</repositories>   
 <distributionManagement>
    <repository>
-     <id>github</id>
-     <name>GitHub anneferger Apache Maven Packages</name>
-     <url>https://maven.pkg.github.com/anneferger/tei-converter</url>
+     <id>githubtei</id>
+     <name>GitHub TEIC Apache Maven Packages</name>
+     <url>https://maven.pkg.github.com/TEIC/tei-converter</url>
    </repository>
 </distributionManagement>
 </project>

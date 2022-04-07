@@ -557,7 +557,7 @@ public class TEIConverter implements Converter,ErrorHandler {
 				transformer.setStylesheetParameters(documentationLanguagePara);
 			    }
 			setTransformationParameters(transformer, id);
-			transformer.setInitialContextNode(initialNode);
+			transformer.setGlobalContextItem(initialNode);
 			Serializer result = proc.newSerializer();
 			result.setOutputStream(fos);
 			transformer.applyTemplates(initialNode, result);
@@ -628,7 +628,7 @@ public class TEIConverter implements Converter,ErrorHandler {
 				transformer.setStylesheetParameters(documentationLanguagePara);
 			    }
 			setTransformationParameters(transformer, id);
-			transformer.setInitialContextNode(initialNode);
+			transformer.setGlobalContextItem(initialNode);
 			Serializer result = proc.newSerializer();
 			result.setOutputStream(fos);
 			transformer.applyTemplates(initialNode, result);
@@ -978,7 +978,7 @@ public class TEIConverter implements Converter,ErrorHandler {
 					transformer.setStylesheetParameters(coverimagePara);
 			}
 			setTransformationParameters(transformer, id);
-			transformer.setInitialContextNode(initialNode);
+			transformer.setGlobalContextItem(initialNode);
 			Serializer result = proc.newSerializer();
 			transformer.applyTemplates(initialNode, result);
 			outputDir = prepareTempDir();
