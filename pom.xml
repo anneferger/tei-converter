@@ -144,11 +144,6 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-	<groupId>com.thaiopensource</groupId>
-	<artifactId>trang</artifactId>
-	<version>20091111</version>
-    </dependency>
-    <dependency>
       <groupId>net.sf.saxon</groupId>
       <artifactId>Saxon-HE</artifactId>
 	<version>9.8.0-15</version>
@@ -157,6 +152,11 @@
         <groupId>com.twelvemonkeys.imageio</groupId>
         <artifactId>imageio-tiff</artifactId>
         <version>3.1.1</version>
+    </dependency>
+    <dependency>
+	<groupId>com.thaiopensource</groupId>
+	<artifactId>trang</artifactId>
+	<version>20091111</version>
     </dependency>
   </dependencies>
    <repositories>
