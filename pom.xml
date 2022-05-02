@@ -126,6 +126,11 @@
   </reporting>-->
   <dependencies>
     <dependency>
+      <groupId>net.sf.saxon</groupId>
+      <artifactId>Saxon-HE</artifactId>
+      <version>9.8.0-15</version>
+    </dependency>
+    <dependency>
       <groupId>pl.psnc.dl.ege</groupId>
       <artifactId>ege-api</artifactId>
       <version>0.4.0</version>
@@ -144,11 +149,6 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>net.sf.saxon</groupId>
-      <artifactId>Saxon-HE</artifactId>
-	<version>9.8.0-15</version>
-    </dependency>
-    <dependency>
         <groupId>com.twelvemonkeys.imageio</groupId>
         <artifactId>imageio-tiff</artifactId>
         <version>3.1.1</version>
@@ -157,6 +157,12 @@
 	<groupId>com.thaiopensource</groupId>
 	<artifactId>trang</artifactId>
 	<version>20091111</version>
+      <exclusions>
+        <exclusion>
+          <groupId>net.sf.saxon</groupId>
+          <artifactId>saxon</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
    <repositories>
