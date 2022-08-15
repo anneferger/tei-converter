@@ -37,7 +37,8 @@ import java.awt.RenderingHints;
 
 import javax.xml.transform.stream.StreamSource;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import org.tei.utils.XMLUtils;
 import org.tei.utils.SaxonProcFactory;
@@ -59,7 +60,7 @@ import pl.psnc.dl.ege.utils.EGEIOUtils;
 
 public class ImageFetcher {
 
-	private static final Logger LOGGER = Logger.getLogger(ImageFetcher.class);
+	private static final Logger LOGGER = LogManager.getLogger(ImageFetcher.class);
 
 	/**
 	 * Changes the graphics in TEI so that the images have width and height information included and also copies the images into new directory, changing their names.

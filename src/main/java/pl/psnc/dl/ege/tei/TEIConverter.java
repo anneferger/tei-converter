@@ -35,7 +35,8 @@ import net.sf.saxon.s9api.XdmNode;
 import org.xml.sax.ErrorHandler;
 
 import org.apache.commons.io.IOUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.tei.exceptions.ConfigurationException;
 import org.tei.tei.DocXTransformationProperties;
 import org.tei.utils.SaxonProcFactory;
@@ -93,7 +94,7 @@ public class TEIConverter implements Converter,ErrorHandler {
 	// List of directories which might contain fonts
 	private static final List<String> fontsInputDirectories = Arrays.asList(new String[] {"fonts"});
 
-	private static final Logger LOGGER = Logger.getLogger(TEIConverter.class);
+	private static final Logger LOGGER = LogManager.getLogger(TEIConverter.class);
 
 	public static final String DOCX_ERROR = "Probably trying to convert from DocX with wrong input.";
 

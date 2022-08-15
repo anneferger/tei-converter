@@ -4,7 +4,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import pl.psnc.dl.ege.types.ConversionActionArguments;
 import pl.psnc.dl.ege.types.DataType;
@@ -13,7 +14,7 @@ import pl.psnc.dl.ege.configuration.EGEConstants;
 final class ConverterConfiguration
 {
 
-	private static final Logger LOGGER = Logger.getLogger(TEIConverter.class);
+	private static final Logger LOGGER = LogManager.getLogger(TEIConverter.class);
 
 	public static final String PROFILE_NOT_FOUND_MSG = "Profile not found, setting default profile...";
 

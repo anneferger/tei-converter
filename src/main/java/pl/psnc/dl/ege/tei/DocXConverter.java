@@ -31,7 +31,8 @@ import org.tei.utils.XMLUtils;
 
 import org.tei.exceptions.ConfigurationException;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * <p>
@@ -45,7 +46,7 @@ import org.apache.log4j.Logger;
 
 public class DocXConverter extends ComplexConverter {
 
-	private static final Logger LOGGER = Logger.getLogger(DocXConverter.class);
+	private static final Logger LOGGER = LogManager.getLogger(DocXConverter.class);
 
 	/**
 	 * Constructs converter for conversion from TEI

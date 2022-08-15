@@ -35,7 +35,8 @@ import org.tei.utils.XMLUtils;
 import pl.psnc.dl.ege.utils.EGEIOUtils;
 import pl.psnc.dl.ege.configuration.EGEConstants;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * <p>
@@ -49,7 +50,7 @@ import org.apache.log4j.Logger;
 
 public abstract class ComplexConverter {
 
-	private static final Logger LOGGER = Logger.getLogger(ComplexConverter.class);
+	private static final Logger LOGGER = LogManager.getLogger(ComplexConverter.class);
 
 	protected final String profile;
 

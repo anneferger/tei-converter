@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>pl.psnc.dl.ege.tei</groupId>
   <artifactId>tei-converter</artifactId>
-  <version>0.6.2</version>
+  <version>0.6.3</version>
   <name>EGE TEI Converter</name>
   <properties>
 
@@ -132,14 +132,8 @@
     </dependency>
     <dependency>
       <groupId>pl.psnc.dl.ege</groupId>
-      <artifactId>ege-api</artifactId>
-      <version>0.4.0</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>pl.psnc.dl.ege</groupId>
       <artifactId>ege-framework</artifactId>
-      <version>0.5</version>
+      <version>0.5.1</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
