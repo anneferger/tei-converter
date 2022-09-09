@@ -383,13 +383,13 @@ public class TEIConverter implements Converter,ErrorHandler {
 					.getProfile(), profile,"to", properties);
 		}
 		// TEI to EPUB
-		else if (Format.EPUB.getMimeType().equals(toMimeType)) {
-			if (!ConverterConfiguration.checkProfile(profile, Format.EPUB
+		else if (Format.EPUB3.getMimeType().equals(toMimeType)) {
+			if (!ConverterConfiguration.checkProfile(profile, Format.EPUB3
 					.getProfile())) {
 				LOGGER.debug(ConverterConfiguration.PROFILE_NOT_FOUND_MSG);
 				profile = EGEConstants.DEFAULT_PROFILE;
 			}
-			transformToEpub(inputStream, outputStream, profile, Format.EPUB.getProfile(), properties);
+			transformToEpub(inputStream, outputStream, profile, Format.EPUB3.getProfile(), properties);
 		}
 		// TEI to TEXT
 		else if (Format.TEXT.getMimeType().equals(toMimeType)
@@ -970,14 +970,14 @@ public class TEIConverter implements Converter,ErrorHandler {
 			Map outputDirPara = new HashMap();
 			outputDirPara.put(new QName("outputDir"), new XdmAtomicValue(dirname + File.separator + "OPS" + File.separator));
 			transformer.setStylesheetParameters(outputDirPara);
-			File coverTemplate = new File (ConverterConfiguration.STYLESHEETS_PATH + File.separator + "profiles" + File.separator + profile + File.separator + "epub" + File.separator + "cover.jpg");
+			/*File coverTemplate = new File (ConverterConfiguration.STYLESHEETS_PATH + File.separator + "profiles" + File.separator + profile + File.separator + "epub3" + File.separator + "cover-template.jpg");
 			if (coverTemplate.exists()) {
 			    String coverOutputDir = outTempDir + File.separator + "OPS" + File.separator;
 			    String coverImage = ImageFetcher.generateCover(coverTemplate, coverOutputDir, properties);
 					Map coverimagePara = new HashMap();
 					coverimagePara.put(new QName("coverimage"), new XdmAtomicValue(coverImage));
 					transformer.setStylesheetParameters(coverimagePara);
-			}
+			}*/
 			setTransformationParameters(transformer, id);
 			transformer.setGlobalContextItem(initialNode);
 			Serializer result = proc.newSerializer();

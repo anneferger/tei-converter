@@ -11,7 +11,7 @@ public enum Format {
      */
     DOCX("docx","application/vnd.openxmlformats-officedocument.wordprocessingml.document","docx","TEI", "TEI P5 XML Document", "text", "Microsoft Word (.docx)", "text", true, 9),
     DTD("dtd","application/xml-dtd","dtd","ODDC", "Compiled TEI ODD", "text", "DTD created from ODD", "text", false, 10),
-    EPUB("epub","application/epub+zip","epub","TEI", "TEI P5 XML Document", "text", "ePub", "text", true, 9),     
+    EPUB3("epub","application/epub3+zip","epub3","TEI", "TEI P5 XML Document", "text", "ePub3", "text", true, 9),
     FO("fo","application/xslfo+xml","fo","TEI", "TEI P5 XML Document", "text", "XSL-FO", "text", true, 10),
     LATEX("latex","application/x-latex","latex","TEI", "TEI P5 XML Document", "text", "LaTeX", "text", true, 10),
     LITE("TEI","text/xml","lite","ODDC", "Compiled TEI ODD", "text", "ODD documentation as TEI Lite", "text", false, 10),
