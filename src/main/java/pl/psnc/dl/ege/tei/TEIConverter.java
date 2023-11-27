@@ -287,8 +287,17 @@ public class TEIConverter implements Converter,ErrorHandler {
 				profile = EGEConstants.DEFAULT_PROFILE;
 			}
 			properties.put("extension", "rng");
-			performXsltTransformation(inputStream, outputStream, Format.RELAXNG
-					.getProfile(), profile,"to", properties);
+			//if new renamed rng to stylesheet folder is not found use the old folder relaxng, see https://github.com/TEIC/tei-converter/issues/5
+			if (!new File(
+					ConverterConfiguration.STYLESHEETS_PATH + File.separator + "profiles"
+							+ File.separator + profile + File.separator + Format.RELAXNG
+							.getProfile()
+							+ File.separator + "to" + ".xsl").exists()){
+				performXsltTransformation(inputStream, outputStream, "relaxng", profile, "to", properties);
+			} else {
+				performXsltTransformation(inputStream, outputStream, Format.RELAXNG
+						.getProfile(), profile, "to", properties);
+			}
 		}
 		// TEI to RNC
 		else if (Format.RNC.getMimeType().equals(toMimeType)

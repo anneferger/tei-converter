@@ -19,7 +19,7 @@ public enum Format {
     ODDJSON("oddjson","application/json","oddjson","ODDC", "Compiled TEI ODD", "text", "Source ODD spec in JSON notation", "text", false, 10),
     ODT("odt","application/vnd.oasis.opendocument.text","odt","TEI", "TEI P5 XML Document", "text", "OpenOffice Text (.odt)", "text", true, 8),
     RDF("rdf","application/rdf+xml","rdf","TEI", "TEI P5 XML Document", "text", "RDF XML", "text", true, 5),
-    RELAXNG("relaxng","application/xml-relaxng","relaxng","ODDC", "Compiled TEI ODD", "text", "RELAX NG schema", "text", true, 10),
+    RELAXNG("relaxng","application/xml-relaxng","rng","ODDC", "Compiled TEI ODD", "text", "RELAX NG schema", "text", true, 10),
     RNC("rnc","application/relaxng-compact","rnc","ODDC", "Compiled TEI ODD", "text", "RELAX NG compact schema", "text", false, 10),
     TEXT("txt","text/plain",    "txt","TEI", "TEI P5 XML Document", "text", "Plain text",   "text", true, 15),
     XHTML("xhtml","application/xhtml+xml","html","TEI", "TEI P5 XML Document", "text", "xHTML", "text", true, 9),

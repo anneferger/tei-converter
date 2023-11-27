@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>pl.psnc.dl.ege.tei</groupId>
   <artifactId>tei-converter</artifactId>
-  <version>0.6.4</version>
+  <version>0.6.5</version>
   <name>EGE TEI Converter</name>
   <properties>
 
@@ -145,7 +145,7 @@
     <dependency>
         <groupId>com.twelvemonkeys.imageio</groupId>
         <artifactId>imageio-tiff</artifactId>
-        <version>3.1.1</version>
+        <version>3.9.4</version>
     </dependency>
     <dependency>
 	<groupId>com.thaiopensource</groupId>
