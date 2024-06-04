@@ -571,7 +571,7 @@ public class TEIConverter implements Converter,ErrorHandler {
 			Serializer result = proc.newSerializer();
 			result.setOutputStream(fos);
 			transformer.applyTemplates(initialNode, result);
-			ior.compressData(outTempDir, outputStream);
+			//need to close fileoutputstreams before saving the files (see https://github.com/TEIC/TEIGarage/issues/81)
 			}
 		} finally {
 			try {
@@ -584,6 +584,8 @@ public class TEIConverter implements Converter,ErrorHandler {
 			} catch (Exception ex) {
 				// do nothing
 			}
+			//now writing the folder after streams are closed
+			ior.compressData(outTempDir, outputStream);
 			if (outTempDir != null && outTempDir.exists())
 				EGEIOUtils.deleteDirectory(outTempDir);
 			if (inTmpDir != null && inTmpDir.exists())
