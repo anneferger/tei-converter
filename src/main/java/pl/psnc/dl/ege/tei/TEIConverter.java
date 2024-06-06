@@ -674,7 +674,6 @@ public class TEIConverter implements Converter,ErrorHandler {
 			    e.printStackTrace();
 
 			}
-			ior.compressData(outTempDir, outputStream);
 		} finally {
 			try {
 				is.close();
@@ -686,6 +685,7 @@ public class TEIConverter implements Converter,ErrorHandler {
 			} catch (Exception ex) {
 				// do nothing
 			}
+			ior.compressData(outTempDir, outputStream);
 			if (outTempDir != null && outTempDir.exists())
 				EGEIOUtils.deleteDirectory(outTempDir);
 			if (inTmpDir != null && inTmpDir.exists())
